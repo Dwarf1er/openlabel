@@ -1,0 +1,46 @@
+name: Build and Publish NuGet Package
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    changelog:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Generate Changelog
+              id: changelog
+              uses: TriPSs/conventional-changelog-action@v6
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+    build:
+        runs-on: ubuntu-latest
+
+        needs: changelog
+
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
+            - name: Setup .NET SDK
+              uses: actions/setup-dotnet@v4
+              with:
+                  dotnet-version: 8.0
+
+            - name: Restore Dependencies
+              run: dotnet restore
+
+            - name: Pack NuGet Package
+              run: |
+                  dotnet pack OpenLabel/ \
+                  --configuration Release \
+                  /p:PackageVersion=${{ steps.changelog.outputs.tag }} \
+                  -o packages
+
+            - name: Publish NuGet Package
+              run: dotnet nuget push packages/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

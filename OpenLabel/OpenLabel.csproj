@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<PackageId>OpenLabel</PackageId>
+		<PackageVersion>0.0.0</PackageVersion>
+		<Authors>Antoine Poulin</Authors>
+		<Description>A library for working with ZPL templates, scaling, and printing labels</Description>
+		<PackageTags>ZPL, Zebra, printing, labels</PackageTags>
+		<RepositoryUrl>https://github.com/Dwarf1er/openlabel</RepositoryUrl>
+		<PackageLicense>https://opensource.org/license/gpl-3-0</PackageLicense>
+		<PackageIcon>../assets/openlabel.png</PackageIcon>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="../assets/openlabel.png">
+			<Pack>true</Pack>
+			<PackagePath>../assets/openlabel.png</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
