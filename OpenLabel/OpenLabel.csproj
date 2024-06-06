@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Templating\" />
+    <Folder Include="Scaling\" />
+  </ItemGroup>
+
 </Project>
