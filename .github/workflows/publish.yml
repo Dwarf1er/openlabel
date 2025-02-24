@@ -24,6 +24,9 @@ jobs:
         needs: changelog
 
         steps:
+            - name: TEST
+              run: echo ${{ steps.changelog.ouputs.tag }}
+
             - name: Checkout Code
               uses: actions/checkout@v4
 
