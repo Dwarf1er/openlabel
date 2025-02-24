@@ -10,9 +10,6 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checkout Code
-              uses: actions/checkout@v4
-
             - name: Generate Changelog
               id: changelog
               uses: TriPSs/conventional-changelog-action@v6
@@ -20,7 +17,7 @@ jobs:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: TEST
-              run: echo ${{ steps.changelog.ouputs.tag }}
+              run: echo "TAG> ${{ steps.changelog.ouputs.tag }}"
 
             - name: Checkout Code
               uses: actions/checkout@v4
