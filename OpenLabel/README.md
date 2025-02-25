@@ -1,16 +1,10 @@
-<div align="center">
-
 # OpenLabel
 ##### ZPL Labeling with Open-Source Flexibility
 
-<img alt="OpenLabel logo" height="280" src="/assets/openlabel.png" />
-
-</div>
-
 # Project Description
 
-OpenLabel is a C# library designed to streamline working with Zebra Programming Language (ZPL) for label printing. It enables developers to send ZPL commands to Zebra label printers, scale labels for different printer resolutions, and customize labels using a flexible templating system.</br></br>
-This library is particularly useful for scenarios where ZPL labels are generated using external tools like [Labelary](https://labelary.com) or other ZPL design software. With OpenLabel, developers can dynamically modify these labels by replacing placeholders, handling conditional statements, and ensuring compatibility across different printer resolutions.</br></br>
+OpenLabel is a C# library designed to streamline working with Zebra Programming Language (ZPL) for label printing. It enables developers to send ZPL commands to Zebra label printers, scale labels for different printer resolutions, and customize labels using a flexible templating system.
+This library is particularly useful for scenarios where ZPL labels are generated using external tools like [Labelary](https://labelary.com) or other ZPL design software. With OpenLabel, developers can dynamically modify these labels by replacing placeholders, handling conditional statements, and ensuring compatibility across different printer resolutions.
 Whether you need to automate label printing, generate dynamic ZPL templates, or adjust labels for varying printer resolutions, OpenLabel provides the flexibility and simplicity required for efficient label management.
 
 # Table of Contents
@@ -18,6 +12,7 @@ Whether you need to automate label printing, generate dynamic ZPL templates, or 
 - [OpenLabel](#openlabel)
         - [ZPL Labeling with Open-Source Flexibility](#zpl-labeling-with-open-source-flexibility)
 - [Project Description](#project-description)
+- [Table of Contents](#table-of-contents)
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -25,6 +20,7 @@ Whether you need to automate label printing, generate dynamic ZPL templates, or 
     - [2. Scale a Label](#2-scale-a-label)
     - [3. Use Templates](#3-use-templates)
 - [License](#license)
+- [Acknowledgements](#acknowledgements)
 
 ## Features
 - **Print ZPL Labels**: Easily send ZPL commands to a Zebra printer over the network.

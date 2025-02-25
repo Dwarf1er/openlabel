@@ -21,9 +21,7 @@ jobs:
               uses: TriPSs/conventional-changelog-action@v6
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
-                  skip-commit: "true"
-                  output-file: "false"
-                  git-push: "false"
+
     publish:
         runs-on: ubuntu-latest
 
