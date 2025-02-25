@@ -6,19 +6,30 @@ on:
             - master
 
 jobs:
-    publish:
+    changelog:
         runs-on: ubuntu-latest
 
+        outputs:
+            version: ${{ steps.changelog.outputs.version }}
+
         steps:
+            - name: Checkout Code
+              uses: actions/checkout@v4
+
             - name: Generate Changelog
               id: changelog
               uses: TriPSs/conventional-changelog-action@v6
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
+                  skip-commit: "true"
+                  output-file: "false"
+                  git-push: "false"
+    publish:
+        runs-on: ubuntu-latest
 
-            - name: TEST
-              run: echo "TAG> ${{ steps.changelog.ouputs.tag }}"
+        needs: changelog
 
+        steps:
             - name: Checkout Code
               uses: actions/checkout@v4
 
@@ -34,7 +45,7 @@ jobs:
               run: |
                   dotnet pack OpenLabel/ \
                   --configuration Release \
-                  /p:PackageVersion=${{ steps.changelog.outputs.tag }} \
+                  /p:PackageVersion=${{ needs.changelog.outputs.version }} \
                   -o packages
 
             - name: Publish NuGet Package

@@ -10,6 +10,7 @@
 		<RepositoryUrl>https://github.com/Dwarf1er/openlabel</RepositoryUrl>
 		<PackageLicense>https://opensource.org/license/gpl-3-0</PackageLicense>
 		<PackageIcon>../assets/openlabel.png</PackageIcon>
+		<PackageReadmeFile>../README.md</PackageReadmeFile>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
@@ -18,6 +19,10 @@
 		<None Include="../assets/openlabel.png">
 			<Pack>true</Pack>
 			<PackagePath>../assets/openlabel.png</PackagePath>
+		</None>
+		<None Include="../README.md">
+			<Pack>true</Pack>
+			<PackagePath>../README.md</PackagePath>
 		</None>
 	</ItemGroup>
 
