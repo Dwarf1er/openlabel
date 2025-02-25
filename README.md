@@ -16,7 +16,6 @@ Whether you need to automate label printing, generate dynamic ZPL templates, or 
 # Table of Contents
 
 - [OpenLabel](#openlabel)
-        - [ZPL Labeling with Open-Source Flexibility](#zpl-labeling-with-open-source-flexibility)
 - [Project Description](#project-description)
   - [Features](#features)
   - [Installation](#installation)
