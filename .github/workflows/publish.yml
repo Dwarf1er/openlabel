@@ -21,6 +21,7 @@ jobs:
               uses: TriPSs/conventional-changelog-action@v6
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
+                  skip-on-empty: "false"
 
     publish:
         runs-on: ubuntu-latest
@@ -41,6 +42,7 @@ jobs:
 
             - name: Pack NuGet Package
               run: |
+                  echo "VERSION> ${{ needs.changelog.outputs.version }}" && \
                   dotnet pack OpenLabel/ \
                   --configuration Release \
                   /p:PackageVersion=${{ needs.changelog.outputs.version }} \
