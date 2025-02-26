@@ -24,7 +24,6 @@ If you find OpenLabel useful, consider starring the repo to show your support! ð
 # Table of Contents
 
 - [OpenLabel](#openlabel)
-        - [ZPL Labeling with Open-Source Flexibility](#zpl-labeling-with-open-source-flexibility)
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
   - [Features](#features)
