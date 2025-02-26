@@ -1,4 +1,8 @@
-# 0.1.0 (2025-02-25)
+## [0.1.1](https://github.com/Dwarf1er/openlabel/compare/v0.1.0...v0.1.1) (2025-02-25)
+
+
+
+# [0.1.0](https://github.com/Dwarf1er/openlabel/compare/69b147b9cc7f39917fb48cae903038330393f9d7...v0.1.0) (2025-02-25)
 
 
 ### Features
