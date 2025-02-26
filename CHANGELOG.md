@@ -1,3 +1,17 @@
+# [1.0.0](https://github.com/Dwarf1er/openlabel/compare/v0.1.1...v1.0.0) (2025-02-26)
+
+
+### doc
+
+* updated README ([74b2940](https://github.com/Dwarf1er/openlabel/commit/74b2940a033631c77f9a4fefa4284f2f37d39774))
+
+
+### BREAKING CHANGES
+
+* Changed license from GPL-3.0 to MIT
+
+
+
 ## [0.1.1](https://github.com/Dwarf1er/openlabel/compare/v0.1.0...v0.1.1) (2025-02-25)
 
 
