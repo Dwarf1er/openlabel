@@ -31,9 +31,9 @@ If you find OpenLabel useful, consider starring the repo to show your support! �
 
 **No more struggling with proprietary software to print your ZPL labels over the network!** OpenLabel provides a developer-friendly way to manage label scaling, templating, and printing, making it perfect for:
 
-- ✅ E-commerce & Warehousing – Automate label printing for shipping.
-- ✅ Manufacturing – Print product labels dynamically.
-- ✅ Retail – Generate barcode labels for inventory.
+- E-commerce & Warehousing – Automate label printing for shipping.
+- Manufacturing – Print product labels dynamically.
+- Retail – Generate barcode labels for inventory.
 
 # Table of Contents
 
@@ -50,9 +50,9 @@ If you find OpenLabel useful, consider starring the repo to show your support! �
 - [Acknowledgements](#acknowledgements)
 
 ## Features
-- 🖨️ **Print ZPL Labels** – Send ZPL commands to a Zebra printer over the network.
-- 📏 **Scale Labels** – Adjust ZPL code to fit different printer resolutions (DPI).
-- 📝 **Template System** – Replace placeholders with actual values and handle conditional statements inside ZPL templates.
+- **Print ZPL Labels** – Send ZPL commands to a Zebra printer over the network.
+- **Scale Labels** – Adjust ZPL code to fit different printer resolutions (DPI).
+- **Template System** – Replace placeholders with actual values and handle conditional statements inside ZPL templates.
 
 ## Installation
 
@@ -86,12 +86,12 @@ string renderedLabel = templateHandler.RenderTemplate(template, placeholders);
 
 # Get Involved
 
-- 💡 Have ideas or feature requests? Open an [issue](https://github.com/Dwarf1er/openlabel/issues) or start a discussion!
-- 🔧 Want to contribute? Fork the repo, submit PRs, and help improve OpenLabel!
-- 📢 Using OpenLabel? Let us know! Share your use case, report issues, or give feedback.
-- 🚀 Spread the word! ⭐ Star the repo, share it on social media, and help grow the community!
+- Have ideas or feature requests? Open an [issue](https://github.com/Dwarf1er/openlabel/issues) or start a discussion!
+- Want to contribute? Fork the repo, submit PRs, and help improve OpenLabel!
+- Using OpenLabel? Let us know! Share your use case, report issues, or give feedback.
+- Spread the word! ⭐ Star the repo, share it on social media, and help grow the community!
 
-Join us in making OpenLabel the best open-source ZPL tool! 🎉
+Join us in making OpenLabel the best open-source ZPL tool!
 
 # License
 
