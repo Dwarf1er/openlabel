@@ -6,9 +6,10 @@
 		<PackageVersion>0.0.0</PackageVersion>
 		<Authors>Antoine Poulin</Authors>
 		<Description>A library for working with ZPL templates, scaling, and printing labels</Description>
-		<PackageTags>ZPL, Zebra, printing, labels</PackageTags>
-		<RepositoryUrl>https://github.com/Dwarf1er/openlabel</RepositoryUrl>
-		<PackageLicense>https://opensource.org/license/mit</PackageLicense>
+        <PackageTags>ZPL, Zebra, printing, labels</PackageTags>
+        <RepositoryUrl>https://github.com/Dwarf1er/openlabel</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>openlabel.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<ImplicitUsings>enable</ImplicitUsings>
