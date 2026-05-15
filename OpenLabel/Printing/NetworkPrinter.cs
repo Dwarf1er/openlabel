@@ -21,13 +21,30 @@ namespace OpenLabel.Printing
         /// - <c>Ok(true)</c> indicates successful printing.
         /// - <c>Err(string)</c> contains an error message if printing fails.
         /// </returns>
-        public async Task<Result<bool, string>> PrintLabelAsync(string printerPath, int labelCount, string zplString)
+        public async Task<Result<bool, string>> PrintLabelAsync(string printerPath, int labelCount, string zplString, string ipAddress)
         {
-            var ipResult = GetPrinterIpAddress(printerPath);
-            if (ipResult.IsFailure)
+            Result<string, string> ipResult;
+            if (string.IsNullOrEmpty(printerPath))
             {
-                return Result<bool, string>.Err(ipResult.Error);
+                var ipReach = IsPrinterReachable(ipAddress);
+                if (ipReach.IsFailure)
+                {
+                    return Result<bool, string>.Err($"Printer at IP address '{ipAddress}' is not reachable.");
+                }
+                else
+                {
+                    ipResult = Result<string, string>.Ok(ipAddress);
+                }
             }
+            else
+            {
+                ipResult = GetPrinterIpAddress(printerPath);
+                if (ipResult.IsFailure)
+                {
+                    return Result<bool, string>.Err(ipResult.Error);
+                }
+            }
+            
 
             using TcpClient client = new TcpClient();
             var connectTask = client.ConnectAsync(ipResult.Value, 9100);
