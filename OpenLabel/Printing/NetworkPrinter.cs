@@ -16,12 +16,13 @@ namespace OpenLabel.Printing
         /// <param name="printerPath">The UNC path or hostname of the printer.</param>
         /// <param name="labelCount">The number of labels to print.</param>
         /// <param name="zplString">The ZPL code to send to the printer.</param>
+        /// <param name="ipAddress">The IP address of the printer. If not provided, the printer's hostname will be resolved.</param>'
         /// <returns>
         /// A <see cref="Result{T, E}"/> where:
         /// - <c>Ok(true)</c> indicates successful printing.
         /// - <c>Err(string)</c> contains an error message if printing fails.
         /// </returns>
-        public async Task<Result<bool, string>> PrintLabelAsync(string printerPath, int labelCount, string zplString, string ipAddress)
+        public async Task<Result<bool, string>> PrintLabelAsync(string printerPath, int labelCount, string zplString, string? ipAddress = null)
         {
             Result<string, string> ipResult;
             if (string.IsNullOrEmpty(printerPath))
